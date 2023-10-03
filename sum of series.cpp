@@ -1,11 +1,30 @@
-#include<iostream>
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+
 using namespace std;
-int main(){
-    int sum,n;
-    cout<<"Enter the value";
-    cin>>n;
-    for(int i=0;i<=n;i++){
-        sum=+i;
+
+// } Driver Code Ends
+//User function template for C++
+class Solution{
+public:
+	// function to return sum of  1, 2, ... n
+	long long seriesSum(long long n) {
+	    return n*(n+1)/2;
+	}
+};
+
+//{ Driver Code Starts.
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        Solution ob;
+        auto ans = ob.seriesSum(n);
+        cout << ans << "\n";
     }
-    cout<<sum;
+    return 0;
 }
+// } Driver Code Ends
